@@ -1,0 +1,146 @@
+<mat-toolbar class="mat-elevation-z8">
+  
+  
+    <img src="https://t4.ftcdn.net/jpg/03/88/84/95/360_F_388849548_SwfED4tw4zM2rypbIbdBHP4oKR4nBwVT.jpg" width="30px" height="30px" style="border-radius:50%">
+    <h4 >VP Mart</h4>
+    
+    
+    <input type="search" style="border-radius: 10px;border:none;outline:none;" placeholder="Search" [(ngModel)]="searchTerm" (keyup)="Search($event)"><i class="fa-solid fa-magnifying-glass"></i>
+    
+    <div class="d-flex">
+      
+        <button routerLink="/cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <div style="font-size: 10px; padding: 3px; margin: 0;" class="btn btn-danger">{{totalItem}}</div>
+          Cart..</button>
+        <button routerLink=""><i class="fa-solid fa-arrow-right-from-bracket"></i></button>  
+   
+
+            </div>
+</mat-toolbar>
+
+<nav class="navbar">
+    <div class="container">
+    <div class="item">
+        <a (click)="filter('')">
+            <h2>All products</h2>
+        </a>
+    </div>
+
+    <div class="item">
+        
+    <div class="dropdown">
+        <h2 >Groceries <i class="fa-solid fa-angle-down"></i></h2>
+        <div class="dropdown-content">
+        <p (click)="filter('fruits')">Fruits</p>
+        <p (click)="filter('vegetables')">Vegetables</p>
+        <p (click)="filter('hms')">Home made Sweets</p>
+        <p (click)="filter('dairy')">Dairy</p>
+        <p (click)="filter('snacks')">Snacks</p>
+        <p (click)="filter('beverage')">Beverage</p>
+        </div>
+      </div>
+      
+      </div>
+    
+    <div class="item">
+            <div class="dropdown">
+                <h2>Electronics <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('mobile')">Mobiles & Tablets</p>
+                  <p (click)="filter('tws')">Ear Phones</p>
+                  <p (click)="filter('tv')">TV</p>
+                  <p (click)="filter('laptop')">Laptops & Computers</p>
+                  <p (click)="filter('watch')">Smart Watch</p>
+                  <p (click)="filter('speakers')">Home Theater</p>
+                  <p (click)="filter('accessories')">Accessories</p>
+                </div>
+              </div>
+    </div>
+    
+    <div class="item">
+        
+            <div class="dropdown">
+                <h2>Fashion <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('men')">Men</p>
+                  <p (click)="filter('women')">Women</p>
+                  <p (click)="filter('kids')">Kids</p>
+                </div>
+              </div>
+        
+    </div>
+    
+    <div class="item">
+        <a (click)="filter('Home & Kitchen')">
+            <div class="dropdown">
+                <h2>Home & Kitchen <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Kitchenware')">Kitchenware</p>
+                  <p (click)="filter('Dining')">Dining</p>
+                  <p (click)="filter('Furnitures')">Furnitures</p>
+                  <p (click)="filter('Decor')">Home Decor</p>
+                  <p (click)="filter('Appliances')">Home Appliances</p>
+                  <p (click)="filter('Toys')">Toys</p>
+                  <p (click)="filter('Electrical')">Electrical</p>
+                  <p (click)="filter('Laundry')">Bathroom & Laundry</p>
+                  <p (click)="filter('Garden')">Garden & Outdoor</p>
+                  <p (click)="filter('Pooja')">Pooja Needs</p>
+                </div>
+              </div>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('Home & Kitchen')">
+            <div class="dropdown">
+                <h2>Beauty <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Make-Up')">Make-Up</p>
+                  <p (click)="filter('Hair')">Hair</p>
+                  <p (click)="filter('Skin')">Skin Care</p>
+                  <p (click)="filter('Fragrances')">Fragrances</p>
+                  <p (click)="filter('Peraonal')">Peraonal Care</p>
+                  <p (click)="filter('Grooming')">Men's Grooming</p>
+                  <p (click)="filter('Fitness')">Fitness</p>
+                  <p (click)="filter('Baby')">Baby Care</p>
+                </div>
+              </div>
+              </a>
+              </div>
+
+</div>
+</nav>
+
+
+<!--slider-->
+<div id="slider">
+
+<figure>
+  <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1660922006_Ganesh-Festival_1680.jpg">
+  <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1661341647_Mumbai.jpg">
+  <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1659849291_1659540318_1659368460_1658932036_1658904158_Atta-Flour_1680X320.jpg" >
+ <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1661272279_Breakfast-Mela_2-_1680_320.jpg">
+ <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1660922006_Ganesh-Festival_1680.jpg">
+</figure>
+
+<div class="img" style="display: inline-block;">
+<img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1659290092_Paytm-910-X-278.jpg" width="50%">
+<img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1661239396_910-278-freecharge.jpg" width="50%">
+</div>  
+<br><br><br>
+<div class="items">
+<div id="abc"  *ngFor= "let item of filterCategory | filter:searchKey:'name'">
+  
+    <img src={{item.image}} width="220px" height="180px"><br><br><br>
+
+    <h3><b>{{item.name}}</b></h3>
+
+    
+
+    <h4>M.R.P : Rs.<b> {{item.price}} </b></h4>
+   
+    <button class="btn btn-primary" (click)=addtocart(item)>Add to cart<i class="fa-solid fa-plus"></i></button>
+      
+</div>
+</div>
